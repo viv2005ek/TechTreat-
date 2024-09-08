@@ -2,7 +2,7 @@ const Bed = require('../models/bedmodel');
 
 exports.allbeds = async (req, res) => {
     try {
-        let db = await Bed.findOne({});
+        let db = await Bed.find({});
         if (!db) {
            return res.send("No beds found. Please add beds to the database")
         }

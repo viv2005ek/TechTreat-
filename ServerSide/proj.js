@@ -4,6 +4,8 @@ app.use(express.json());
 
 const router = require('./routes/routes')
 app.use(router);
+const emailRoutes = require("./routes/email");
+app.use(emailRoutes)
 const connect = require('./config/connect');
 connect();
 
